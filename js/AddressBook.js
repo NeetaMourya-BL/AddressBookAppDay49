@@ -1,7 +1,5 @@
-// <!-- UC3 Add Form Input Fields to the Address Book Form UI-->
-class EmployeePayrollData {
-
-    //getter and setter method
+//UC => 6
+class AddressBook {
     get id() {
         return this._id;
     }
@@ -9,7 +7,7 @@ class EmployeePayrollData {
         this._id = id;
     }
 
-    // UC => 4 form validation
+    // UC => 7
     get name() {
         return this._name;
     }
@@ -22,7 +20,7 @@ class EmployeePayrollData {
         }
     }
 
-    // UC => 4 form validation
+    // UC => 7
     get phone() {
         return this._phone;
     }
@@ -35,7 +33,7 @@ class EmployeePayrollData {
         }
     }
 
-    // UC => 4 form validation
+    // UC => 7
     get address() {
         return this._address;
     }
@@ -67,5 +65,13 @@ class EmployeePayrollData {
     }
     set zipcode(zipcode) {
         this._zipcode = zipcode;
+    }
+
+    //method to get values UC => 7
+    toString() {
+
+        return "id : " + this._id + ", name : " + this._name + ", phone : " + this._phone + ", address : " + this._address +
+            ", city : " + this.city + ", state : " + this._state + ", zipcode : " + this._zipcode;
+
     }
 }

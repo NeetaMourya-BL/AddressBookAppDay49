@@ -1,4 +1,5 @@
-<!-- UC1 Begin with creating an Address Book Form UI--> 
+/* <!-- UC1 Begin with creating an Address Book Form UI--> */
+
 * {
     box-sizing: border-box;
 }
@@ -59,7 +60,8 @@ body {
 .add-book {
     padding-left: 5px;
 }
-<!-- UC2 Ability to add Form Header-->
+/* <!-- UC2 Ability to add Form Header--> */
+
 .form-content {
     min-height: calc(100% - 80px);
     display: flex;
@@ -107,8 +109,8 @@ body {
     height: 30px;
     width: 30px;
 }
+/* <!-- UC3 Add Form Input Fields to the Address Book Form UI--> */
 
-<!-- UC3 Add Form Input Fields to the Address Book Form UI-->
 .body {
     padding: 50px 60px;
 }
@@ -172,6 +174,24 @@ error-output {
     margin-bottom: 30px;
     font-family: Roboto;
 }
+
+.profie-radio-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-radio-content>label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile {
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+
 select {
     padding: 12px;
     border: 1px solid#ccc;
@@ -185,4 +205,41 @@ select {
     margin-right: 40px;
     width: 100%;
     margin-bottom: 30px;
+}
+/* <!-- UC5 Add submit and reset button at the end of the form--> */
+
+.add-reset {
+    width: 104%;
+    height: 10vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+}
+
+button {
+    width: 125px;
+    height: 48px;
+    border: none;
+    outline: none;
+    background: #D3D3D3;
+    color: #354230;
+    font-size: 16px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #3179fd;
+    border: #3179fd solid 1px;
+    background: #fff;
+}
+
+.addButton,
+.resetButton {
+    margin-right: 5%;
 }

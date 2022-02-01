@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AddressBookApp</title>
+    <title>Addressbook Practice</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="../css/AddPersonAddressBook.css">
+    <script type="text/javascript" src="../js/AddFormValidation.js"></script>
+    <script type="text/javascript" src="../js/AddressBook.js"></script>
+    <script type="text/javascript" src="../js/site_properties.js"></script>
 </head>
+<style>
+
+</style>
 
 <body>
     <!-- UC1 Begin with creating an Address Book Form UI-->
@@ -21,6 +27,7 @@
             </div>
         </div>
     </header>
+
     <!-- UC2 Ability to add Form Header-->
     <div class="form-content">
         <form class="form" action="#" onsubmit="save(event);" onreset="reset();">
@@ -28,10 +35,11 @@
                 <span class="form-head-text">PERSON ADDRESS FORM</span>
                 <span class="cross-icon">
                     <ion-icon class="close-circle" name="close-circle">
-                        <a href="../html/AddPersonAddressBook.html"></a>
+                        <a href="../html/AddPersonAddressBook.html"></a> 
                     </ion-icon>
                 </span>
             </div>
+
             <!-- UC3 Add Form Input Fields to the Address Book Form UI-->
             <div class="body">
                 <label class="label text" for="name">Full Name</label></br>&nbsp;
@@ -50,24 +58,24 @@
                     <div class="label-city">
                         <label class="city" for="city">City</label><br>&nbsp;
                         <select id="city" name="city">
-                            <option value="">Select City</option>
-                            <option value="1">Pune</option>
-                            <option value="2">Betul</option>
-                            <option value="3">Bhopal</option>
-                            <option value="4">Indore</option>
-                            <option value="5">Bilaspur</option>
-                            <option value="6">Jabalpur</option>
-                            <option value="7">Raipur</option>
-                            <option value="8">Durg</option>
+                        <option value="">Select City</option>
+                        <option value="1">Pune</option>
+                        <option value="2">Betul</option>
+                        <option value="3">Bhopal</option>
+                        <option value="4">Indore</option>
+                        <option value="5">Bilaspur</option>
+                        <option value="6">Jabalpur</option>
+                        <option value="7">Raipur</option>
+                        <option value="8">Durg</option>
                         </select>
                     </div>
                     <div class="label-state">
                         <label class="state" for="state">State</label><br>&nbsp;
                         <select id="state" name="state">
-                            <option value="">Select State</option>
-                            <option value="1">Maharashtra</option>
-                            <option value="2">Madhya Pradesh</option>
-                            <option value="3">Chhattisgarh</option>
+                        <option value="">Select State</option>
+                        <option value="1">Maharashtra</option>
+                        <option value="2">Madhya Pradesh</option>
+                        <option value="3">Chhattisgarh</option>
                         </select>
                     </div>
                     <div class="label-zip">
