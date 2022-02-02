@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Addressbook Practice</title>
+    <title>AddressBookApp</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="../css/AddPersonAddressBook.css">
     <script type="text/javascript" src="../js/AddFormValidation.js"></script>
@@ -34,12 +34,7 @@
             <div class="form-head">
                 <span class="form-head-text">PERSON ADDRESS FORM</span>
                 <span class="cross-icon">
-                    <ion-icon class="close-circle" name="close-circle">
-<<<<<<< HEAD
-                        <a href="../html/home.html"></a>
-=======
-                         <a href="./home.html"></a> <!--UC9 Handle Cancel and Reset Event -->
->>>>>>> UC9_handleCancelAndResetEvent
+                    <ion-icon class="close-circle" name="close-circle" onclick="cancel()">
                     </ion-icon>
                 </span>
             </div>
@@ -89,6 +84,7 @@
                 </div>
                 <!-- UC5 Add submit and reset button at the end of the form-->
                 <div class="add-reset">
+                    <a href="./home.html"></a> <!--UC9 Handle Cancel and Reset Event -->
                     <button type="submit" class="addButton" id="addButton">Submit</button>
                     <button type="reset" class="resetButton" id="resetButton">Reset</button>
                 </div>
