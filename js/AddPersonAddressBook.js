@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     validateName();
     validatePhone();
     validateAddress();
-    checkForUpdate();
+    checkForUpdate(); // UC7 Ability to Save Updated Entry into Local Storage.
 })
 
 function validateName() {
@@ -148,7 +148,7 @@ function resetTheForm() {
     //console.log(resetForm);
     alert("Data has been reset now")
 }
-//Section: 2 UC => 6 Ability to update address book contact details.
+//Section: 2 UC => 6&7 Ability to update address book contact details.
 const checkForUpdate = () => {
     let jsonData = localStorage.getItem('edit-person');
     isUpdate = jsonData ? true : false;
