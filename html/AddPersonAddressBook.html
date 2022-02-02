@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="../css/AddPersonAddressBook.css">
     <script type="text/javascript" src="../js/AddFormValidation.js"></script>
-    <script type="text/javascript" src="../js/AddressBook.js"></script>
+    <script type="text/javascript" src="../js/AddressBookApp.js"></script>
     <script type="text/javascript" src="../js/site_properties.js"></script>
 </head>
 <style>
@@ -30,8 +30,7 @@
 
     <!-- UC2 Ability to add Form Header-->
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save(event);" onreset="resetForm()">
-            <div class="form-head">
+        <form class="form" action="#" onsubmit="save(event);" id="resetForm">            <div class="form-head">
                 <span class="form-head-text">PERSON ADDRESS FORM</span>
                 <span class="cross-icon">
                     <ion-icon class="close-circle" name="close-circle" onclick="cancel()">

@@ -12,7 +12,7 @@ function validateName() {
     const textError = document.querySelector('.text-error');
     name.addEventListener('input', function () {
         try {
-            let personData = new AddressBook();
+            let personData = new AddressBookApp();
             personData.name = name.value;
             textError.textContent = "";
         } catch (e) {
@@ -25,7 +25,7 @@ function validatePhone() {
     const phoneError = document.querySelector('.phone-error');
     phone.addEventListener('input', function () {
         try {
-            let personData = new AddressBook();
+            let personData = new AddressBookApp();
             personData.phone = phone.value;
             phoneError.textContent = "";
         } catch (e) {
@@ -39,7 +39,7 @@ function validateAddress() {
     const addressError = document.querySelector('.address-error');
     address.addEventListener('input', function () {
         try {
-            let personData = new AddressBook();
+            let personData = new AddressBookApp();
             personData.address = address.value;
             addressError.textContent = "";
         } catch (e) {
@@ -49,26 +49,31 @@ function validateAddress() {
 }
 //UC8 Ability to Add the Address Book Entry into an Address Book List and store it in Local Storage
 const save = (event) => {
+    try{
         event.preventDefault();
         event.stopPropagation();
         let personAddressBook = setAddressBookObject();
         console.log(personAddressBook);
         createAndUpdateStorage(personAddressBook);
         alert("Data Stored With Name: " + personAddressBook._name);
-        window.location.replace(site_properties.homePage);
+        //window.location.replace(site_properties.homePage);
+        }catch(e){
+            console.log(e);
+        }
 }
+    
 
 const setAddressBookObject = () => {
-    let addressBook = new AddressBook();
+    let addressBookApp = new AddressBookApp();
 
-    addressBook.name = getInputValueId('#name');
-    addressBook.phone = getInputValueId('#phone')
-    addressBook.address = getInputValueId('#address')
-    addressBook.city = getInputValueId('#city')
-    addressBook.state = getInputValueId('#state');
-    addressBook.zipcode = getInputValueId('#zipcode');
-    addressBook.id = addressBookObject._id;
-    return addressBook;
+    addressBookApp.name = getInputValueId('#name');
+    addressBookApp.phone = getInputValueId('#phone')
+    addressBookApp.address = getInputValueId('#address')
+    addressBookApp.city = getInputValueId('#city')
+    addressBookApp.state = getInputValueId('#state');
+    addressBookApp.zipcode = getInputValueId('#zipcode');
+    addressBookApp.id = addressBookObject._id;
+    return addressBookApp;
 }
 //UC8 Ability to Add the Address Book Entry into an Address Book List and store it in Local Storage
 const createAndUpdateStorage = (personData) => {
@@ -113,7 +118,7 @@ const createNewBookId = () => {
 }
 //UC9 Handle Cancel and Reset Event
 const cancel = () => {
-    window.location.replace(siteProperties.homePage);
+    window.location.replace(site_properties.homePage);
 }
 
 //Reset the values

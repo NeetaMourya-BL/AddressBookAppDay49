@@ -1,5 +1,5 @@
 //UC => 6
-class AddressBook {
+class AddressBookApp {
     get id() {
         return this._id;
     }
