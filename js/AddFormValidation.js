@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     validateName();
     validatePhone();
     validateAddress();
+    resetTheForm();
 })
 
 function validateName() {
@@ -118,4 +119,26 @@ const createNewBookId = () => {
 //UC9 Handle Cancel and Reset Event
 const cancel = () => {
     window.location.replace(site_properties.homePage);
+}
+function resetTheForm() {
+    const resetForm = () => {
+        setTextValue('#name', '');
+        setTextValue('#phone', '');
+        setValue('#address', '');
+        setTextValue('#ciy', '');
+        setTextValue('#state', '');
+        setTextValue('#zipcode', '');
+    }
+
+    const setTextValue = (id, message) => {
+        const textError = document.querySelector(id);
+        textError.textContent = message;
+    }
+
+    const setValue = (id, value) => {
+        let element = document.querySelector(id);
+        element.value = value;
+    }
+    console.log(resetForm);
+    alert("Data has been reset now")
 }
