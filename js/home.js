@@ -4,7 +4,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.querySelector(".person-count").textContent = addressBookList.length;
     createInnerHTML();
     localStorage.removeItem("edit-person");
-    remove();
+   // remove();
+    update();
 });
 
 
@@ -56,4 +57,13 @@ const remove = (data) => {
     localStorage.setItem('AddressBookList', JSON.stringify(addressBookList));
     document.querySelector('.person-count').textContent = addressBookList.length;
     createInnerHTML();
+}
+
+//Section: 2 UC => 6 Ability to update address book contact details.
+const update = (data) => {
+    let addBookData = addressBookList.find(personData => personData._id == data.id);
+    if (!addBookData)
+        return;
+    localStorage.setItem('edit-person', JSON.stringify(addBookData));
+    window.location.replace(site_properties.addPerson);
 }

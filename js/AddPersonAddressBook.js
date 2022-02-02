@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     validateName();
     validatePhone();
     validateAddress();
+    checkForUpdate();
 })
 
 function validateName() {
@@ -57,7 +58,7 @@ const save = (event) => {
         console.log(personAddressBook);
         createAndUpdateStorage(personAddressBook);
         alert("Data Stored With Name: " + personAddressBook._name);
-        //window.location.replace(Site_Properties.home);
+        window.location.replace(site_properties.home);
     } catch (e) {
         console.log(e)
     }
@@ -146,4 +147,27 @@ function resetTheForm() {
     }
     //console.log(resetForm);
     alert("Data has been reset now")
+}
+//Section: 2 UC => 6 Ability to update address book contact details.
+const checkForUpdate = () => {
+    let jsonData = localStorage.getItem('edit-person');
+    isUpdate = jsonData ? true : false;
+    if (!isUpdate)
+        return;
+    addressBookObject = JSON.parse(jsonData);
+    setForm();
+}
+
+const setForm = () => {
+    setValue('#name', addressBookObject._name);
+    setValue('#phone', addressBookObject._phone);
+    setValue('#address', addressBookObject._address);
+    setValue('#city', addressBookObject._city);
+    setValue('#state', addressBookObject._state);
+    setValue('#zipcode', addressBookObject._zipcode);
+}
+
+const setValue = (id, value) => {
+    let element = document.querySelector(id);
+    element.value = value;
 }

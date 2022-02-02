@@ -1,5 +1,5 @@
-let Site_Properties = {
+let site_properties = {
     home: "../html/home.html",
-    addEmployee: "../html/Addinfo.html"
+    addPerson: "../html/AddPersonAddressBook.html"
 }
 
