@@ -1,6 +1,6 @@
 //<!-- UC3 Add Form Input Fields to the Address Book Form UI-->
 class AddressBookApp {
-        //getter and setter method
+    //getter and setter method
     get id() {
         return this._id;
     }
@@ -67,8 +67,8 @@ class AddressBookApp {
     set zipcode(zipcode) {
         this._zipcode = zipcode;
     }
-     //UC => 7 Populate the Address Book Contact Class and capture the user Entry using getters and setters
-     toString() {
+    //UC => 7 Populate the Address Book Contact Class and capture the user Entry using getters and setters
+    toString() {
 
         return "id : " + this._id + ", name : " + this._name + ", phone : " + this._phone + ", address : " + this._address +
             ", city : " + this.city + ", state : " + this._state + ", zipcode : " + this._zipcode;
