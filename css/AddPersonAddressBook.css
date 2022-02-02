@@ -63,7 +63,7 @@ body {
 /* <!-- UC2 Ability to add Form Header--> */
 
 .form-content {
-    min-height: calc(100% - 50px);
+    min-height: calc(100% - 80px);
     display: flex;
     justify-content: center;
     align-items: center;

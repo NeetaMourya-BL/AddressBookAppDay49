@@ -1,4 +1,4 @@
-let site_properties = {
-    homePage: "../html/home.html",
-    addPerson: "../html/AddPersonAddressBook.html"
-};
+let Site_Properties = {
+    home: "../html/home.html",
+    addEmployee: "../html/Addinfo.html"
+}
