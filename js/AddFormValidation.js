@@ -115,3 +115,7 @@ const createNewBookId = () => {
     localStorage.setItem('BookId', bookId);
     return bookId;
 }
+//UC9 
+const cancel = () => {
+    window.location.replace(site_properties.homePage);
+}
