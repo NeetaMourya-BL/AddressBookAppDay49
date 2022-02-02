@@ -1,3 +1,4 @@
+//UC => 4 Added form validations
 let addressBookObject = {};
 let isUpdate = false;
 window.addEventListener('DOMContentLoaded', (event) => {
@@ -9,7 +10,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 function validateName() {
     const name = document.querySelector('#name');
     const textError = document.querySelector('.text-error');
-    name.addEventListener('input', function() {
+    name.addEventListener('input', function () {
         try {
             let personData = new AddressBook();
             personData.name = name.value;
@@ -19,11 +20,10 @@ function validateName() {
         }
     });
 }
-
 function validatePhone() {
     const phone = document.querySelector('#phone');
     const phoneError = document.querySelector('.phone-error');
-    phone.addEventListener('input', function() {
+    phone.addEventListener('input', function () {
         try {
             let personData = new AddressBook();
             personData.phone = phone.value;
@@ -37,7 +37,7 @@ function validatePhone() {
 function validateAddress() {
     const address = document.querySelector('#address');
     const addressError = document.querySelector('.address-error');
-    address.addEventListener('input', function() {
+    address.addEventListener('input', function () {
         try {
             let personData = new AddressBook();
             personData.address = address.value;
@@ -47,7 +47,7 @@ function validateAddress() {
         }
     });
 }
-
+//UC8 Ability to Add the Address Book Entry into an Address Book List and store it in Local Storage
 const save = (event) => {
     try {
         event.preventDefault();
@@ -74,7 +74,7 @@ const setAddressBookObject = () => {
     addressBook.id = addressBookObject._id;
     return addressBook;
 }
-
+//UC8 Ability to Add the Address Book Entry into an Address Book List and store it in Local Storage
 const createAndUpdateStorage = (personData) => {
     let dataList = JSON.parse(localStorage.getItem("AddressBookList"));
     if (dataList) {
