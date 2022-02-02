@@ -5,7 +5,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     validateName();
     validatePhone();
     validateAddress();
-    resetTheForm();
 })
 
 function validateName() {
@@ -50,17 +49,13 @@ function validateAddress() {
 }
 //UC8 Ability to Add the Address Book Entry into an Address Book List and store it in Local Storage
 const save = (event) => {
-    try {
         event.preventDefault();
         event.stopPropagation();
         let personAddressBook = setAddressBookObject();
         console.log(personAddressBook);
         createAndUpdateStorage(personAddressBook);
         alert("Data Stored With Name: " + personAddressBook._name);
-        window.location.replace(Site_Properties.home);
-    } catch (e) {
-        console.log(e)
-    }
+        window.location.replace(site_properties.homePage);
 }
 
 const setAddressBookObject = () => {
@@ -118,8 +113,10 @@ const createNewBookId = () => {
 }
 //UC9 Handle Cancel and Reset Event
 const cancel = () => {
-    window.location.replace(site_properties.homePage);
+    window.location.replace(siteProperties.homePage);
 }
+
+//Reset the values
 function resetTheForm() {
     const resetForm = () => {
         setTextValue('#name', '');
@@ -139,6 +136,6 @@ function resetTheForm() {
         let element = document.querySelector(id);
         element.value = value;
     }
-    console.log(resetForm);
+    console.log("resetForm");
     alert("Data has been reset now")
 }
