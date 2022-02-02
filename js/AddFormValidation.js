@@ -115,7 +115,7 @@ const createNewBookId = () => {
     localStorage.setItem('BookId', bookId);
     return bookId;
 }
-//UC9 
+//UC9 Handle Cancel and Reset Event
 const cancel = () => {
     window.location.replace(site_properties.homePage);
 }
